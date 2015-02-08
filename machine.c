@@ -3,6 +3,10 @@
 void mach_step(struct instr instr)
 {
     switch (instr.op) {
+    case HALT:
+        exec_halt();
+        break;
+
     case ADD:
         exec_add();
         break;
@@ -19,6 +23,11 @@ void mach_step(struct instr instr)
         exec_dup();
         break;
     }
+}
+
+void exec_halt()
+{
+    exit(0);
 }
 
 void exec_ldc(item c)
