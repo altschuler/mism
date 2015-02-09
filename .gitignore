@@ -5,3 +5,12 @@
 /mini
 /mism
 /doc/
+/latex/
+
+# latex
+auto
+*.aux
+*.toc
+*.log
+*.out
+*.pdf
