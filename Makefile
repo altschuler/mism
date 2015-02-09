@@ -17,7 +17,7 @@ DEBUG_FILE = $(SDIR)/debug.h
 SRC = $(wildcard $(SDIR)/*.c)
 OBJ = $(patsubst $(SDIR)/%.c, $(ODIR)/%.o, $(SRC))
 
-.PHONY: all sed debug release build run test clean
+.PHONY: all sed debug release build run test doc clean
 
 all: debug run
 
@@ -44,6 +44,9 @@ run: $(TARGET)
 
 test:
 	@echo TODO: test
+
+doc:
+	doxygen
 
 clean:
 	-rm -f $(OBJ) $(TARGET)
