@@ -3,11 +3,14 @@
 #include "stack.h"
 #include "instructions.h"
 #include "machine.h"
+#include "debug.h"
 
 #define PLEN 9
 
 int main (int argc, char **argv)
 {
+    dprint("%s\n", "Debug enabled");
+
     int program[PLEN] = {
         0x400000D,     /* 00000100 000000000000000000001101: LDC 13 */
         0x4000025,     /* 00000100 000000000000000000100101: LDC 37 */
